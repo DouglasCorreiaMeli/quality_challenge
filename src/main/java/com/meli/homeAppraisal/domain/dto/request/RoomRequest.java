@@ -23,9 +23,9 @@ public class RoomRequest {
 
     @NotNull(message = "A largura do cômodo não pode estar vazia.")
     @Max(value = 25, message = "A largura máxima permitida por cômodo é de 25 metros")
-    Double roomWidth;
+    double roomWidth;
 
     @NotNull(message = "O comprimento do cômodo não pode estar vazio.")
     @Max(value = 33, message = "O comprimento máximo permitido por cômodo é de 33 metros")
-    Double roomLength;
+    double roomLength;
 }

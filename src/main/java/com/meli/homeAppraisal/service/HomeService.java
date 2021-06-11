@@ -38,23 +38,23 @@ public class HomeService {
 
     private HomeResponse responseRounded(HomeResponse response) {
         DecimalFormat df = new DecimalFormat("###.##");
-        response.setPropertyValue(Double.valueOf(df.format(response.getPropertyValue())));
-        response.setTotalSquareMeters(Double.valueOf(df.format(response.getTotalSquareMeters())));
-        response.getBiggestRoom().setSquareMeters(Double.valueOf(df.format(response.getBiggestRoom().getSquareMeters())));
-        response.getRoomsSquareMeters().forEach(r -> r.setSquareMeters(Double.valueOf(df.format(r.getSquareMeters()))));
+        response.setPropertyValue(Double.parseDouble(df.format(response.getPropertyValue())));
+        response.setTotalSquareMeters(Double.parseDouble(df.format(response.getTotalSquareMeters())));
+        response.getBiggestRoom().setSquareMeters(Double.parseDouble(df.format(response.getBiggestRoom().getSquareMeters())));
+        response.getRoomsSquareMeters().forEach(r -> r.setSquareMeters(Double.parseDouble(df.format(r.getSquareMeters()))));
         return response;
 
     }
 
 
-    private Double sumTotalSquareMeters(List<RoomRequest> rooms) {
+    public double sumTotalSquareMeters(List<RoomRequest> rooms) {
         return this.calculateRoomsSquareMeters(rooms)
                 .stream()
                 .mapToDouble(RoomResponse::getSquareMeters)
                 .sum();
     }
 
-    private List<RoomResponse> calculateRoomsSquareMeters(List<RoomRequest> rooms) {
+    public List<RoomResponse> calculateRoomsSquareMeters(List<RoomRequest> rooms) {
         List<RoomResponse> roomResponseList = new ArrayList <>();
         rooms.forEach(roomRequest -> roomResponseList.add(RoomResponse
                                 .builder()
@@ -71,9 +71,9 @@ public class HomeService {
                 .orElseThrow( () -> new ResourceNotFoundException("não há cômodos"));
     }
 
-    public Double calculatePropertyValue(List<RoomRequest> rooms, String propDistrict) {
+    public double calculatePropertyValue(List<RoomRequest> rooms, String propDistrict) {
 
-        Double valuePerSquareMeter  = Optional.ofNullable(repository.getDistricts().get(propDistrict))
+        double valuePerSquareMeter  = Optional.ofNullable(repository.getDistricts().get(propDistrict))
                 .orElseThrow(() -> new ResourceNotFoundException("Bairro não encontrado"));
 
         return this.calculateRoomsSquareMeters(rooms)

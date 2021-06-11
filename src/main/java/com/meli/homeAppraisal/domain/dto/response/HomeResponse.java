@@ -13,8 +13,8 @@ import java.util.List;
 @Data
 public class HomeResponse {
 
-    Double totalSquareMeters;
-    Double propertyValue;
+    double totalSquareMeters;
+    double propertyValue;
     RoomResponse biggestRoom;
     List<RoomResponse> roomsSquareMeters;
 }

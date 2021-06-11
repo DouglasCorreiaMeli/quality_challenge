@@ -12,5 +12,5 @@ import lombok.NoArgsConstructor;
 public class RoomResponse {
 
     String roomName;
-    Double squareMeters;
+    double squareMeters;
 }
