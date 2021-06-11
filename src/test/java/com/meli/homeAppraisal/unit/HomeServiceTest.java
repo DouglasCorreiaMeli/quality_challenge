@@ -1,7 +1,6 @@
 package com.meli.homeAppraisal.unit;
 
 import com.meli.homeAppraisal.domain.dto.request.HomeRequest;
-import com.meli.homeAppraisal.domain.dto.request.RoomRequest;
 import com.meli.homeAppraisal.domain.dto.response.RoomResponse;
 import com.meli.homeAppraisal.domain.error.ResourceNotFoundException;
 import com.meli.homeAppraisal.helpers.TestUtilsGenerator;
@@ -16,8 +15,9 @@ import org.mockito.junit.jupiter.MockitoExtension;
 
 import java.util.HashMap;
 
-import static org.junit.jupiter.api.Assertions.*;
-import static org.mockito.Mockito.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
+import static org.mockito.Mockito.when;
 
 
 @ExtendWith(MockitoExtension.class)
