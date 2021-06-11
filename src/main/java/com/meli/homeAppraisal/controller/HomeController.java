@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RestController;
 import javax.validation.Valid;
 
 @RestController
-@RequestMapping("/")
+@RequestMapping("/analyzeHome")
 public class HomeController {
 
     private final HomeService service;
@@ -22,7 +22,7 @@ public class HomeController {
         this.service = service;
     }
 
-    @PostMapping("analyzeHome")
+    @PostMapping
     public ResponseEntity<HomeResponse> analyzeHome(@Valid @RequestBody HomeRequest request){
         return ResponseEntity.status(HttpStatus.OK).body(this.service.analyzeHome(request));
     }

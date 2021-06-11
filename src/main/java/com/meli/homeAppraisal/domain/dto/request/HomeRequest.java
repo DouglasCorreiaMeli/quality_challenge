@@ -30,5 +30,6 @@ public class HomeRequest {
     String propDistrict;
 
     @Valid
+    @NotEmpty(message = "a casa precisa ter cômodos")
     List<RoomRequest> rooms;
 }
