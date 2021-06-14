@@ -19,7 +19,7 @@ public class NeighborhoodRepository {
         this.districts.put("moóca", 6860.0);
         this.districts.put("tatuapé", 6800.0);
         this.districts.put("santana", 6810.0);
-        this.districts.put("parada Inglesa", 6790.0);
+        this.districts.put("parada inglesa", 6790.0);
     }
 
     public HashMap <String, Double> getDistricts() {
