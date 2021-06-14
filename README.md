@@ -57,6 +57,6 @@
 | moóca        | 6860.0   |
 | santana      | 6810.0   |
 | tatuapé      | 6800.0   |
-|parada Inglesa| 6790.0   |
+|parada inglesa| 6790.0   |
 
 
