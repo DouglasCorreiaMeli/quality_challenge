@@ -1,5 +1,9 @@
 # quality_challenge
 
+> **Endpoint:** /analyzeHome <p>
+> **Method:** POST
+
+
 ### Exemplo de Request:
 ```json
 {
