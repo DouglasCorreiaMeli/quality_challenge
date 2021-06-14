@@ -47,19 +47,16 @@
 ```
 
 ### Bairros disponíveis para teste: 
-```java
-HashMap<String, Double> districts = new HashMap <>();
 
-    // a chave é o nome do bairro 
-    // o valor é R$ por mˆ2
+| Bairro       |   R$/mˆ  |
+|--------------|:--------:|
+| vila olímpia | 12310.0  |
+| itaim bibi   | 11570.0  |
+| pinheiros    | 11250.0  |
+| vila madalena| 11340.0  |
+| moóca        | 6860.0   |
+| santana      | 6810.0   |
+| tatuapé      | 6800.0   |
+|parada Inglesa| 6790.0   |
 
-  this.districts.put("vila olímpia", 12310.0);
-  this.districts.put("itaim bibi", 11570.0);
-  this.districts.put("pinheiros", 11250.0);
-  this.districts.put("vila madalena", 11340.0);
-  this.districts.put("moóca", 6860.0);
-  this.districts.put("tatuapé", 6800.0);
-  this.districts.put("santana", 6810.0);
-  this.districts.put("parada Inglesa", 6790.0);
-```
 
